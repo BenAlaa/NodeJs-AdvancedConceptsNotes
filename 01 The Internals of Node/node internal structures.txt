@@ -1,0 +1,12 @@
+1. Node concests of standard library moduls that written in JS and C++
+2. This modules calls to parts, V8 & libuv
+3. V8 => (javascript engin ) to execute javascript code
+4. libuve => to access hardware resources and network and handle concurency
+5. we use node above libuv because we need to write code in JS and let libuv do the rest of us to access resources
+
+6. JS code --> Nodejs -> (V8 & libuv)
+
+7. Node modules are cosider as API in javascript to access C++ code in libuv and V8
+8. Some examples of these modules [http, fs, crypto, path]
+9. every module written in JS and in C++
+10. we can find JS side in "lib" folder and C++ side in "src" folder
