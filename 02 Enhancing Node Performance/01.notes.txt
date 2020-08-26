@@ -1,0 +1,30 @@
+We can run nodejs server in cluster mode so we can create multible instances with multible eventloops so we can enhance node performance
+We alsow can achive this by using "Worker Threads" and this is experimental teachnique.
+
+Nodemoon note work correctlly with clustering
+
+How to handle node clusters?
+Cluster manager is resposible for handling all clusters
+
+
+# Cluster Manager:
+- cluster manager don't responsible for handling any request
+- cluster manager monitor the health of all node clusters
+- cluster manager can start instances, stop them, restart them and do adminstratoin tasks over them
+
+# Clustering flow
+
+--> Run node cluster.js 
+--> execute cluster.js file 
+--> create cluster manager 
+--> startup worker instances 
+--> cluster.fork() 
+--> go to cluster.js and execute a second time
+
+# Notes:
+- when cluster manager start it has a property called "isMaster" = true
+- when fork another instances these instances will not be master.
+- we use this prop to check if this is master or note call fork()
+- If we create many instances that don't mean that the app will be fast and to test that we will make benchmarking with "apache benchmark"
+- ab -c 50 -n 500 localhost:3000/fast
+

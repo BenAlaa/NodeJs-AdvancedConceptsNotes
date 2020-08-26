@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BenAlaa/NodeJs-AdvancedConceptsNotes/issues"
   },
-  "homepage": "https://github.com/BenAlaa/NodeJs-AdvancedConceptsNotes#readme"
+  "homepage": "https://github.com/BenAlaa/NodeJs-AdvancedConceptsNotes#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
